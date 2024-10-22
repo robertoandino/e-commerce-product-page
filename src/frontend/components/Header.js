@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const Header = () => (
     <header className="bg-gray-800 bg-opacity-70 rounded-full shadow-lg py-2 mx-4 mt-8">
-        <div className="container mx-auto flex justify-between items-center">
-            <h1 className="text-xl font-bold text-white">Autos</h1>
+        <div className="container mx-auto flex justify-between items-center font-serif">
+            <h1 className="text-xl text-white">Autos</h1>
             <nav>
                 <ul className="flex space-x-4">
                     <li>
