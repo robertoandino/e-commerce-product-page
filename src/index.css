@@ -6,8 +6,6 @@
 body {
   background-image: url('./images/egor-vikhrev-S0cqn0mZU0E-unsplash.jpg');
   background-size: cover;
+  background-attachment: fixed;
   background-position: center;
-  background-repeat: no-repeat;
-  margin: 0;
-  height: 100vh;
 }

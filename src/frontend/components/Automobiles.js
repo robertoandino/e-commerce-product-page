@@ -4,7 +4,7 @@ import img2 from '../../images/jonny-gios-xo0KQrjYkuU-unsplash.jpg'
 import img3 from '../../images/jonny-gios-zDo2oePRJrM-unsplash.jpg'
 import img4 from '../../images/karsten-winegeart-v7aIztpSjxw-unsplash.jpg'
 
-const ProductPage = () => {
+const Automobiles = () => {
 
     const [selectedImage, setSelectedImage] = useState(
         "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0"
@@ -49,4 +49,4 @@ const ProductPage = () => {
     );
 };
 
-export default ProductPage;
+export default Automobiles;
