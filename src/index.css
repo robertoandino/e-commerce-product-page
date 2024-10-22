@@ -9,3 +9,17 @@ body {
   background-attachment: fixed;
   background-position: center;
 }
+
+.fixed {
+  position: fixed;
+  width: 100%;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.translate-y-0 {
+  transform: translateY(0);
+}
+
+.-translate-y-full {
+  transform: translateY(-100%);
+}
