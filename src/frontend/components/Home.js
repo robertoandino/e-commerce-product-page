@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback} from 'react';
 
 const quotes = [
     "Embrace the Art of Timeless Elegance",
@@ -19,6 +19,15 @@ const Home = () => {
             setCurrentQuote(newQuoteIndex);
         }
     }, [currentQuote]);
+
+    const scrollToNextQuote = () => {
+        if (currentQuote < quotes.length - 1) {
+            window.scrollTo({
+                top: window.innerHeight * (currentQuote + 1),
+                behavior: 'smooth',
+            });
+        }
+    }
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
@@ -44,7 +53,7 @@ const Home = () => {
             {currentQuote === 0 && (
                 <div className="fixed bottom-10 left-1/2 transform -translate-x-1/2 text-center">
                     <p className="text-white text-lg mb-2">Explore</p>
-                    <div className="animate-bounce">
+                    <div onClick={scrollToNextQuote} className="animate-bounce cursor-pointer">
                         <span className="text-white text-4xl">⇩</span>
                     </div>
                 </div>
