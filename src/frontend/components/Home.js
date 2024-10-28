@@ -40,6 +40,15 @@ const Home = () => {
                     </div>
                 </div>
             ))}
+
+            {currentQuote === 0 && (
+                <div className="fixed bottom-10 left-1/2 transform -translate-x-1/2 text-center">
+                    <p className="text-white text-lg mb-2">Explore</p>
+                    <div className="animate-bounce">
+                        <span className="text-white text-4xl">⇩</span>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };
