@@ -1,10 +1,21 @@
 import React, { useState, useEffect, useCallback} from 'react';
+import img1 from '../../images/nick-karvounis-OUJznLLS4-4-unsplash.jpg'
+import img2 from '../../images/hyunwon-jang-WpF7JpiKpTk-unsplash.jpg'
+import img3 from '../../images/milivoj-kuhar-ZZpn4xJHFHI-unsplash.jpg'
+import img4 from '../../images/jacob-spence--lxokV5E0tc-unsplash.jpg'
 
 const quotes = [
     "Embrace the Art of Timeless Elegance",
     "Unveil a curated selection of rare vintage automobiles.",
     "Where classic craftsmanship meets modern luxury.",
     "Experience the allure of classic cars."
+];
+
+const images = [
+    img1,
+    img2,
+    img3,
+    img4
 ];
 
 const Home = () => {
@@ -44,8 +55,15 @@ const Home = () => {
                     className={`inset-0 flex items-center justify-center transition-opacity duration-500 ${index === currentQuote ? 'opacity-100' : 'opacity-0'}`}
                     style={{ height: '100vh' }} 
                 >
-                    <div className="bg-gray-800 bg-opacity-80 p-8 rounded-lg shadow-xl text-center">
-                        <h1 className="text-6xl font-serif text-white mb-4">{quote}</h1>
+                    <div className="bg-gray-800 bg-opacity-55 p-8 rounded-lg shadow-xl text-center">
+                        <h1 className="text-5xl font-serif text-white mb-4">{quote}</h1>
+                    </div>
+                    <div className="flex items-center justify-center mt-8">
+                        <img
+                            src={images[index]}
+                            alt={`For quote ${index + 1}`}
+                            className="max-w-[500px] max-h-[50vh] w-auto h-auto object-cover rounded-lg"
+                        />
                     </div>
                 </div>
             ))}
