@@ -52,7 +52,8 @@ const Home = () => {
             {quotes.map((quote, index) => (
                 <div
                     key={index}
-                    className={`inset-0 flex items-center justify-center transition-opacity duration-500 ${index === currentQuote ? 'opacity-100' : 'opacity-0'}`}
+                    className={`inset-0 flex items-center justify-center transition-all duration-500 
+                        ${index === currentQuote ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
                     style={{ height: '100vh' }} 
                 >
                     <div className="bg-gray-800 bg-opacity-55 p-8 rounded-lg shadow-xl text-center">
@@ -62,7 +63,7 @@ const Home = () => {
                         <img
                             src={images[index]}
                             alt={`For quote ${index + 1}`}
-                            className="max-w-[500px] max-h-[50vh] w-auto h-auto object-cover rounded-lg"
+                            className="max-w-[500px] max-h-[30vh] w-auto h-auto object-cover rounded-lg"
                         />
                     </div>
                 </div>
