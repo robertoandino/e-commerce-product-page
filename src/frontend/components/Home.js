@@ -69,7 +69,7 @@ const Home = () => {
                 </div>
             ))}
 
-            {currentQuote === 0 && (
+            {(currentQuote === 0 || currentQuote === 1  || currentQuote === 2 ) && (
                 <div className="fixed bottom-10 left-1/2 transform -translate-x-1/2 text-center">
                     <p className="text-white text-lg mb-2">Explore</p>
                     <div onClick={scrollToNextQuote} className="animate-bounce cursor-pointer">

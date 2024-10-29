@@ -6,9 +6,7 @@ import img4 from '../../images/karsten-winegeart-v7aIztpSjxw-unsplash.jpg'
 
 const Automobiles = () => {
 
-    const [selectedImage, setSelectedImage] = useState(
-        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0"
-    );
+    const [selectedImage, setSelectedImage] = useState(img1);
 
     const images = [ img1, img2, img3, img4];
 

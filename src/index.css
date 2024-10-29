@@ -2,9 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
-  background-image: url('./images/egor-vikhrev-S0cqn0mZU0E-unsplash.jpg');
+  background-image: url('./images/picCar.webp');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
