@@ -4,6 +4,7 @@ import Automobiles from './frontend/components/Automobiles';
 import Header from './frontend/components/Header';
 import Footer from './frontend/components/Footer';
 import Home from './frontend/components/Home';
+import Contact from './frontend/components/Contact';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/automobiles" element={<Automobiles/>}/>
+          <Route path="/contact" element={<Contact/>}/>
         </Routes>
       </main>
       <Footer />
