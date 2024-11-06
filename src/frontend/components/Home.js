@@ -11,25 +11,26 @@ const quotes = [
     "Experience the allure of classic cars."
 ];
 
-const images = [
-    img1,
-    img2,
-    img3,
-    img4
-];
+const images = [img1, img2, img3, img4];
 
 const Home = () => {
     const [currentQuote, setCurrentQuote] = useState(0);
 
+    const preloadImages = useCallback((srcArray) => {
+        srcArray.forEach((src) => {
+            const img = new Image();
+            img.src = src;
+        })
+    }, []);
+
     const handleScroll = useCallback(() => {
         const scrollY = window.scrollY;
-        const windowHeight = window.innerHeight;
+        const newQuoteIndex = Math.floor(scrollY / window.innerHeight);
 
-        const newQuoteIndex = Math.floor(scrollY / windowHeight);
         if (newQuoteIndex !== currentQuote && newQuoteIndex < quotes.length) {
             setCurrentQuote(newQuoteIndex);
         }
-    }, [currentQuote]);
+    }, [currentQuote]); 
 
     const scrollToNextQuote = () => {
         if (currentQuote < quotes.length - 1) {
@@ -41,11 +42,12 @@ const Home = () => {
     }
 
     useEffect(() => {
+        preloadImages(images);
         window.addEventListener('scroll', handleScroll);
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, [handleScroll]);
+    }, [handleScroll, preloadImages]);
 
     return (
         <div className="h-[400vh] bg-cover bg-center relative">
