@@ -2,7 +2,7 @@ import React from 'react';
 
 const Contact = () => (
     <div className="flex flex-col items-center justify-center min-h-screen text-white font-serif p-8">
-        <div className="max-w-2xl w-full text-center bg-gray-800 bg-opacity-75 p-8 rounded-lg shadow-lg">
+        <div className="max-w-2xl w-full text-center bg-gray-800 bg-opacity-75 p-8 rounded-2xl shadow-lg">
             <h2 className="text-4xl mb-6">Get in Touch</h2>
             <p className="text-lg mb-8">We'd love to hear from you. Whether you're interested in our selection of vintage cars or have questions, feel free to reach out.</p>
 
