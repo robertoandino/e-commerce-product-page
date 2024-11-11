@@ -17,6 +17,14 @@ const Automobiles = () => {
     ];
 
     useEffect(() => {
+        const preloadImages = images.map((src) => {
+            const img = new Image();
+            img.src = src;
+            return img;
+        });
+    }, [images])
+
+    useEffect(() => {
         window.scrollTo(0, 0);
     }, [location.pathname]);
 
