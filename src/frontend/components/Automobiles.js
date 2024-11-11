@@ -1,4 +1,5 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import img1 from '../../images/aleksey-malinovski-ORdigtC0JPM-unsplash.jpg'
 import img2 from '../../images/dominik-lange-AavxWqRBG5M-unsplash.jpg'
 import img3 from '../../images/felix-itb1TbV5H7w-unsplash.jpg'
@@ -6,6 +7,7 @@ import img4 from '../../images/robin-vet-q6LFMQ6wVZ0-unsplash.jpg'
 
 const Automobiles = () => {
 
+    const location = useLocation();
     const images = useMemo(() => [img1, img2, img3, img4], []);
     const descriptions = [
         { title: "Classic Car Model A", price: "$120,000", info: "This classic model is known for its elegance and craftsmanship." },
@@ -13,6 +15,10 @@ const Automobiles = () => {
         { title: "Vintage VW Beetle", price: "$150,000", info: "This beetle combines charm with incredible speed." },
         { title: "Retro Convertible D", price: "$95,000", info: "A convertible with classic aesthetics and luxury." }
     ];
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location.pathname]);
 
     return (
         <div className="container mx-auto p-8 mt-40 max-w-3xl bg-gray-900 bg-opacity-60 rounded-2xl shadow-xl text-gray-200">

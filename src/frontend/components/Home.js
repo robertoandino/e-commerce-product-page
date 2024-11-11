@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback} from 'react';
+import { useLocation } from 'react-router-dom';
 import img1 from '../../images/nick-karvounis-OUJznLLS4-4-unsplash.jpg'
 import img2 from '../../images/hyunwon-jang-WpF7JpiKpTk-unsplash.jpg'
 import img3 from '../../images/milivoj-kuhar-ZZpn4xJHFHI-unsplash.jpg'
@@ -15,6 +16,7 @@ const images = [img1, img2, img3, img4];
 
 const Home = () => {
     const [currentQuote, setCurrentQuote] = useState(0);
+    const location = useLocation();
 
     const preloadImages = useCallback((srcArray) => {
         srcArray.forEach((src) => {
@@ -40,6 +42,10 @@ const Home = () => {
             });
         }
     }
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location.pathName]);
 
     useEffect(() => {
         preloadImages(images);
