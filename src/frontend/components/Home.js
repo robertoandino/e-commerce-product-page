@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback} from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import img1 from '../../images/nick-karvounis-OUJznLLS4-4-unsplash.jpg'
 import img2 from '../../images/hyunwon-jang-WpF7JpiKpTk-unsplash.jpg'
 import img3 from '../../images/milivoj-kuhar-ZZpn4xJHFHI-unsplash.jpg'
@@ -45,7 +45,7 @@ const Home = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, [location.pathName]);
+    }, [location.pathname]);
 
     useEffect(() => {
         preloadImages(images);
@@ -83,6 +83,16 @@ const Home = () => {
                     <div onClick={scrollToNextQuote} className="animate-bounce cursor-pointer">
                         <span className="text-white text-4xl">⇩</span>
                     </div>
+                </div>
+            )}
+
+            {currentQuote === quotes.length - 1 && (
+                <div className="fixed bottom-5 left-1/2 transform -translate-x-1/2 text-center">
+                    <Link to="/automobiles">
+                        <div className="text-white text-lg font-serif cursor-pointer animate-bounce">
+                            Automobiles
+                        </div>
+                    </Link>
                 </div>
             )}
         </div>
