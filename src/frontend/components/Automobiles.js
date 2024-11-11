@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react';
-import img1 from '../../images/jonny-gios-X7UFvBn0vZc-unsplash.jpg'
-import img2 from '../../images/jonny-gios-xo0KQrjYkuU-unsplash.jpg'
-import img3 from '../../images/jonny-gios-zDo2oePRJrM-unsplash.jpg'
-import img4 from '../../images/karsten-winegeart-v7aIztpSjxw-unsplash.jpg'
+import img1 from '../../images/aleksey-malinovski-ORdigtC0JPM-unsplash.jpg'
+import img2 from '../../images/dominik-lange-AavxWqRBG5M-unsplash.jpg'
+import img3 from '../../images/felix-itb1TbV5H7w-unsplash.jpg'
+import img4 from '../../images/robin-vet-q6LFMQ6wVZ0-unsplash.jpg'
 
 const Automobiles = () => {
 
@@ -10,7 +10,7 @@ const Automobiles = () => {
     const descriptions = [
         { title: "Classic Car Model A", price: "$120,000", info: "This classic model is known for its elegance and craftsmanship." },
         { title: "Vintage Coupe B", price: "$85,000", info: "A vintage masterpiece with timeless appeal and a powerful engine." },
-        { title: "Antique Roadster C", price: "$150,000", info: "This roadster combines charm with incredible speed." },
+        { title: "Vintage VW Beetle", price: "$150,000", info: "This beetle combines charm with incredible speed." },
         { title: "Retro Convertible D", price: "$95,000", info: "A convertible with classic aesthetics and luxury." }
     ];
 
